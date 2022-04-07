@@ -7,8 +7,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: foo
-        uses: actions/IvanWooll/github_actions/.github/actions/action@v1.1
+        uses: ./.github/actions/action
         with:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
+
+
+        # /Users/ivanwooll/Development/github_actions/.github/actions
